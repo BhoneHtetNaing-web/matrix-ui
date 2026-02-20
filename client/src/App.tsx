@@ -3,6 +3,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import MatrixBackground from "./components/MatrixBackground";
+import Admin from "./pages/Admin";
 
 export default function App() {
   const token = localStorage.getItem("token");
@@ -22,6 +23,7 @@ export default function App() {
             element={token ? <Dashboard /> : <Navigate to="/login" />}
           />
           <Route path="*" element={<Navigate to={token ? "/dashboard" : "/login"} />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </div>
     </div>
