@@ -22,3 +22,15 @@ model User {
   subscription  String        @default("free")
   createdAt     DateTime      @default(now())
 }
+
+model VerificationToken {
+  id        String   @id @default(uuid())
+  token     String
+  userId    String
+  expiresAt DateTime  @default(now())
+}
+
+enum Role {
+  ADMIN
+  USER
+}
