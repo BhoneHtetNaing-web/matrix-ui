@@ -1,0 +1,14 @@
+# client
+React + Vite + TS
+
+# server
+Node + Express + Prisma
+
+# shared
+types
+
+git init
+git add .
+git commit -m "Matrix SaaS ready"
+git remote add origin <your-repo-url>
+git push -u origin main
